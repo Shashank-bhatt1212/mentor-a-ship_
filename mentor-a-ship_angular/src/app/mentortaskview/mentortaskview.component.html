@@ -1,0 +1,68 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div><h1 href="#">CapstoneProject</h1></div>
+        <div>
+            <a href="#"> Dashboard </a>
+            <ul>
+                <ul class="navbar-nav ">
+                   <div class="dropdown"><button class="dropbtn">Assosiate list
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a (click)="clickforAssosiateView()">Assosiate View </a>
+                        </div>
+                    </div>
+                  
+                </ul>
+            </ul>
+            <ul class="navbar-nav">
+                <div class="dropdown"><button class="dropbtn">profile
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a (click)="clickToViewProfile()">View Profile</a>
+                        <a (click)="clickforEditProfile()">EditProfile/ChangePassword</a>
+                        <a href="#">Logout</a>
+                    </div>
+                </div>
+            </ul>
+        </div>
+
+    </nav>
+</header>
+
+
+    <h2>here are the courses which is assigned to you {{mentoremail}}</h2>
+    <table class=table>
+        <thead>
+            <tr>
+                <!-- <th>ID</th> -->
+                <th>CourseName</th>
+                <th>Assesment</th>
+                <th>Completion</th>
+                <th>StarDate</th>
+                <th>Note</th>
+                <th>Link</th>
+                <th>Assosiate</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- <for(Todo todo:todos)> -->
+            <tr *ngFor="let course of courselist">
+                <!-- <td>{{todo.id}}</td> -->
+                <td>{{course.coursename}}</td>
+                <td>{{course.assesment}}</td>
+                <td>{{course.completion}}</td>
+                <td>{{course.startdate| date | uppercase}}</td>
+                <td>{{course.note}}</td>
+                <td>{{course.link}}</td>
+                <td>{{course.assosiate}}</td>
+            </tr>
+    
+        </tbody>
+    
+    
+    </table>
+    
+
+<app-footerforallpage></app-footerforallpage>

@@ -1,0 +1,59 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div><h1 href="#">CapstoneProject</h1></div>
+        <div>
+            <ul class="navbar-nav">
+                <a (click)="linkForMentorDetails()"  class="nav-link">Mentor Profile</a>
+
+            </ul>
+          
+            <ul class="navbar-nav">
+                <div class="dropdown"><button class="dropbtn">profile
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a (click)="editprofileAssosiate()">View Profile</a>
+                        <a (click)="redirectToChangePassword()">EditProfile/ChangePassword</a>
+                        <a href="#">Logout</a>
+                    </div>
+                </div>
+            </ul>
+        </div>
+
+    </nav>
+</header>
+<h2>here are the courses which is assign to you {{email}}</h2>
+<table class=table>
+    <thead>
+        <tr>
+            <!-- <th>ID</th> -->
+            <th>COURSE NAME</th>
+            <th>ASSESMENT</th>
+            <th>COMPLETION</th>
+            <th>START DATE</th>
+            <th>NOTES</th>
+            <th>LINK</th>
+            <th>update_percentage</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- <for(Todo todo:todos)> -->
+        <tr *ngFor="let course of courseslist">
+            <!-- <td>{{todo.id}}</td> -->
+            <td>{{course.coursename}}</td>
+            <td>{{course.assesment}}</td>
+            <td><input [(ngModel)]="course.completion" #description="ngModel"  ></td>
+           <!-- piping to make a proper formate of date.piping we can do in many ways, we use '|'  -->
+            <td>{{course.startdate| date | uppercase}}</td>
+            <td>{{course.note}}</td>
+            <td>{{course.link}}</td>
+            <td ><button  class="button button3" (click)="updatecourse(course.id,course.completion,course)"  >Update</button>
+           </td>
+        </tr>
+
+    </tbody>
+
+
+</table>
+
+<app-footerforallpage></app-footerforallpage>

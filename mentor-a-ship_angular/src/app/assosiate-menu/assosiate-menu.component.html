@@ -1,0 +1,62 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div><h1 href="#">CapstoneProject</h1></div>
+        <div>
+            <ul class="navbar-nav">
+                <a (click)="linkForMentorDetails()"  class="nav-link">Mentor Profile</a>
+            </ul>
+            <ul>
+                <ul class="navbar-nav ">
+                   <div class="dropdown"><button class="dropbtn">updates
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a (click)="viewupdatetasklink()">View/Update Tasks/Course</a>
+                            <a  (click)="linksforhelpLink()">link for help</a>
+                        </div>
+                    </div>
+                  
+                </ul>
+            </ul>
+            <ul class="navbar-nav">
+                <div class="dropdown"><button class="dropbtn">profile
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a (click)="redirectToChangePassword()">EditProfile/ChangePassword</a>
+                        <a href="#">Logout</a>
+                    </div>
+                </div>
+            </ul>
+        </div>
+
+    </nav>
+</header>
+<h1> Welcome, here is your Assosiate Profile</h1>
+<div class="container">
+    <table class=table>
+
+        <thead>
+            <tr>
+                <th>FIELD</th>
+                <th>VALUE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>NAME</td>
+                <td>{{assosiatename}}</td>
+            </tr>
+            <tr>
+                <!------------------------->
+                <td>EMAIL</td>
+                <td>{{assosiateemail}}</td>
+            </tr>
+           
+
+        </tbody>
+
+
+    </table>
+
+<app-footerforallpage></app-footerforallpage>

@@ -1,0 +1,87 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div><h1 href="#">CapstoneProject</h1></div>
+        <div>
+            <a href="#"> Dashboard </a>
+            <ul>
+                <ul class="navbar-nav ">
+                   <div class="dropdown"><button class="dropbtn">Assosiate list
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a (click)="clickforAssosiateView()">Assosiate View </a>
+                            <a (click)="clickfortaskview()">List View </a>
+                        </div>
+                    </div>
+                  
+                </ul>
+            </ul>
+            <ul class="navbar-nav">
+                <div class="dropdown"><button class="dropbtn">profile
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a (click)="clickToViewProfile()">View Profile</a>
+                        <a (click)="clickforEditProfile()" >EditProfile/ChangePassword</a>
+                        <a href="#">Logout</a>
+                    </div>
+                </div>
+            </ul>
+        </div>
+
+    </nav>
+</header>
+<h1>here is {{mentoremail}} can add course to {{assosiateemail}}</h1>
+<div class="alert alert-success">message</div>
+<div class="container">
+    <table class=table>
+        <thead>
+            <tr>
+                <th>FIELD</th>
+                <th>VALUE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ID</td>
+                <td><input [(ngModel)]="course.id" #description="ngModel"  ></td>
+
+            </tr>
+            <tr>
+                <!------------------------->
+                <td>COURSE NAME</td>
+                <td><input [(ngModel)]="course.coursename" #description="ngModel"  ></td>
+            </tr>
+            <tr>
+                <!------------------------->
+                <td>ASSEMENT</td>
+                <td><input [(ngModel)]="course.assesment" #description="ngModel"  ></td>
+            </tr>
+            <tr>
+                <!------------------------->
+                <td>NOTE</td>
+                <td><input [(ngModel)]="course.note" #description="ngModel"  ></td>            </tr>
+            <tr>
+                <!------------------------->
+                <td>LINK</td>
+                <td><input [(ngModel)]="course.link" #description="ngModel"  ></td>
+            </tr>
+            <tr>
+                <!------------------------->
+                <td>COMPLETION</td>
+                <td><input [(ngModel)]="course.completion" #description="ngModel"  ></td>
+            </tr>
+            <tr>
+                <!------------------------->
+                <td>START DATE</td>
+                <!-- <td><input [(ngModel)]="course.startdate" #description="ngModel"  ></td> -->
+                <input type="date" #targetDate="ngModel" [ngModel] ="course.startdate| date:'yyyy-MM-dd'" (ngModelChange)="course.startdate = $event" class="form-control" name="startdate" required="required">
+
+            </tr>
+        </tbody>
+
+
+    </table>
+    <button  class="button button3" (click)=" backtoAssosiateviewmentor(course)">Update</button>
+
+<app-footerforallpage></app-footerforallpage>

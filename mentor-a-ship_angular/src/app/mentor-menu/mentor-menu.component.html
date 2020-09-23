@@ -1,0 +1,80 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div><h1 href="#">CapstoneProject</h1></div>
+        <div>
+            <a href="#"> Dashboard </a>
+            <ul>
+                <ul class="navbar-nav ">
+                   <div class="dropdown"><button class="dropbtn">Assosiate list
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a (click)="clickforAssosiateView()">Assosiate View </a>
+                            <a (click)="clickfortaskview()">Task View</a>
+                        </div>
+                    </div>
+                  
+                </ul>
+            </ul>
+            <ul class="navbar-nav">
+                <div class="dropdown"><button class="dropbtn">profile
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <!-- <a (click)="clickToViewProfile()">View Profile</a> -->
+                        <a (click)="clickforEditProfile()">EditProfile/ChangePassword</a>
+                        <a href="#">Logout</a>
+                    </div>
+                </div>
+            </ul>
+        </div>
+
+    </nav>
+</header>
+<h1> Welcome {{mentor.name}}, here is your Profile</h1>
+<div class="container">
+    <table class=table>
+
+        <thead>
+            <tr>
+                <th>FIELD</th>
+                <th>VALUE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>NAME</td>
+                <td>{{mentor.name}}</td>
+            </tr>
+            <tr>
+                <!------------------------->
+                <td>EMAIL</td>
+                <td>{{mentor.email}}</td>
+            </tr>
+            <tr>
+                <!------------------------->
+                <td>COMPANY NAME</td>
+                <td>{{mentor.company_name}}</td>
+            </tr>
+            <tr>
+                <!------------------------->
+                <td>ROLE</td>
+                <td>{{mentor.role}}</td>
+            </tr>
+            <tr>
+                <!------------------------->
+                <td>AREA</td>
+                <td>{{mentor.area}}</td>
+
+            </tr>
+            <tr>
+                <!------------------------->
+                <td>Expertise</td>
+                <td>{{mentor.expertise}}</td>
+
+            </tr>
+
+        </tbody>
+
+
+    </table><app-footerforallpage></app-footerforallpage>

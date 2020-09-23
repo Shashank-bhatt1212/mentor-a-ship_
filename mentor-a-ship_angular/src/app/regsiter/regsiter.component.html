@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <form action="/action_page.php">
+        <div class="container" *ngIf="mentor">
+            <h1>Register to The CapstoneProject</h1>
+
+            <ul>
+                <li style="float:right"><a routerLink="/assosiateregister">Register as Assosiate</a></li>
+            </ul>
+
+
+
+            <p>Please fill in this form to create an account.</p>
+            <hr>
+            <label><b>Name</b></label>
+            <input type="text" placeholder="Enter name" name="name" id="name" required  [(ngModel)]="mentor.name" >
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" id="email" required [(ngModel)]="mentor.email">
+
+            <label><b>Company Name</b></label>
+            <input type="text" placeholder="Enter your company name" name="companyName" id="companyName" required [(ngModel)]="mentor.company_name">
+
+            <label><b>Role</b></label>
+            <input type="text" placeholder="Enter your role" name="role" id="role" required [(ngModel)]="mentor.role">
+
+            <label><b>Area</b></label>
+            <input type="text" placeholder="Enter your area/field" name="area" id="area" required [(ngModel)]="mentor.area">
+
+            <label><b>Expertise</b></label>
+            <input type="text" placeholder="Enter Expertise " name="expertise" id="expertise" required [(ngModel)]="mentor.expertise">
+            <hr>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" id="psw" required [(ngModel)]="mentor.password">
+
+            <label for="psw-repeat"><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required [(ngModel)]="repeatPassword">
+
+            <button type="submit" class="registerbtn" (click)="registerUser()" >Register</button>
+
+        </div>
+
+        <div class="container signin">
+            <p>Already have an account? click to <a routerLink="/login">login</a>.</p>
+        </div>
+    </form>
+</body>
+
+</html>

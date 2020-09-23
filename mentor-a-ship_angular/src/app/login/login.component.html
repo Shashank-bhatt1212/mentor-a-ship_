@@ -1,0 +1,34 @@
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+    
+    <form action="/action_page.php">
+      <div class="container">
+        <h1>Login to the CapstoneProject</h1>
+        <p>Select Account type</p>
+           <input type="radio" id="mentor" name="usertype" value="mentor" [(ngModel)]="mentor" required >
+           <label for="mentor">Mentor</label><br>
+           <input type="radio" id="assosiate" name="usertype" value="assosiate" [(ngModel)]="assosiate" required>
+           <label for="female">Assosiate</label><br>
+           <input type="radio" id="admin" name="usertype" value="admin" [(ngModel)]="admin" required>
+           <label for="other">Admin</label>
+        <hr>
+        <label for="email"><b>email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" id="email" required [(ngModel)]="email" required >
+        
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" id="psw" required [(ngModel)]="password" required>
+
+        <button (click)="loginUser()"  type="submit" class="registerbtn">Login</button>
+       
+      </div>
+      
+      <div class="container signin">
+        <p>Don't have an account?Click to Register <a routerLink="/register">Register</a>.</p>
+      </div>
+    </form>
+    </body>
+    </html>
+    <app-footerforallpage></app-footerforallpage>

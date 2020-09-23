@@ -1,0 +1,89 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div><h1 href="#">CapstoneProject</h1></div>
+        <div>
+            <a href="#"> Dashboard </a>
+            <ul>
+                <ul class="navbar-nav ">
+                   <div class="dropdown"><button class="dropbtn">Assosiate list
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a (click)="clickforAssosiateView()">Assosiate View </a>
+                            <a (click)="clickfortaskview()">List View </a>
+                        </div>
+                    </div>
+                  
+                </ul>
+            </ul>
+            <ul class="navbar-nav">
+                <div class="dropdown"><button class="dropbtn">profile
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a (click)="clickToViewProfile()">View Profile</a>
+                        <a href="#">Logout</a>
+                    </div>
+                </div>
+            </ul>
+        </div>
+
+    </nav>
+</header>
+
+<h1> Welcome {{mentor.name}}, here is your Profile</h1>
+<div class="alert alert-success">message</div>
+<div class="container">
+    <table class=table>
+
+        <thead>
+            <tr>
+                <th>FIELD</th>
+                <th>VALUE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>NAME</td>
+                <td><input [(ngModel)]="mentor.name" #description="ngModel"  ></td>
+            </tr>
+            <tr>
+                <!------------------------->
+                <td>EMAIL</td>
+                <td><input [(ngModel)]="mentor.email" #description="ngModel"  ></td>
+            </tr>
+            <tr>
+                <!------------------------->
+                <td>COMPANY NAME</td>
+                <td><input [(ngModel)]="mentor.company_name" #description="ngModel"  ></td>
+            </tr>
+            <tr>
+                <!------------------------->
+                <td>ROLE</td>
+                <td><input [(ngModel)]="mentor.role" #description="ngModel"  ></td>
+            </tr>
+            <tr>
+                <!------------------------->
+                <td>AREA</td>
+                <td><input [(ngModel)]="mentor.area" #description="ngModel"  ></td>
+
+            </tr>
+            <tr>
+                <!------------------------->
+                <td>Expertise</td>
+                <td><input [(ngModel)]="mentor.expertise" #description="ngModel"  ></td>
+
+            </tr>
+            <tr>
+                <!------------------------->
+                <td>password</td>
+                <td><input [(ngModel)]="mentor.password" #description="ngModel"  ></td>
+
+            </tr>
+
+        </tbody>
+
+
+    </table>
+    <button  class="button button3" (click)=" updatementor(mentor.name,mentor.role,mentor.company_name,mentor.area,mentor.expertise,mentor.password,mentor)">Update</button>
+<app-footerforallpage></app-footerforallpage>

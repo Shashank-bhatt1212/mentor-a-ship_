@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <form action="/action_page.php">
+        <div class="container" *ngIf="assosiate">
+            <h1>Register to The CapstoneProject</h1>
+
+            <ul>
+                <li><a class="active" routerLink="/register" >Register as Mentor</a></li>
+            </ul>
+
+
+
+            <p>Please fill in this form to create an account.</p>
+            <hr>
+            <label><b>Name</b></label>
+            <input type="text" placeholder="Enter name" name="name" id="name" required  [(ngModel)]="assosiate.name">
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" id="email" required [(ngModel)]="assosiate.email">
+
+            <hr>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" id="psw" required [(ngModel)]="assosiate.password">
+
+            <label for="psw-repeat"><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required [(ngModel)]="repeatPassword">
+
+            <button type="submit" class="registerbtn"  (click)=" newAssosiate()">Register as Assosiate</button>
+
+        </div>
+
+        <div class="container signin">
+            <p>Already have an account? click to <a routerLink="/login">login</a>.</p>
+        </div>
+    </form>
+</body>
+
+</html>

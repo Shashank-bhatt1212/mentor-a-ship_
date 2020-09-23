@@ -1,0 +1,52 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div><h1 href="#">CapstoneProject</h1></div>
+        <div>
+            <ul class="navbar-nav">
+                <a (click)="linkForMentorDetails()" class="nav-link">Mentor Profile</a>
+            </ul>
+            <a (click)="viewupdatetasklink()" class="nav-link">View/Update Tasks/Course</a>
+
+            <ul class="navbar-nav">
+
+                <div class="dropdown"><button class="dropbtn">profile
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a (click)="editprofileAssosiate()">View Profile</a>
+                        <a (click)="redirectToChangePassword()">EditProfile/ChangePassword</a>
+                        <a href="#">Logout</a>
+                    </div>
+                </div>
+            </ul>
+        </div>
+
+    </nav>
+</header>
+<h2>here are the courses's link to you{{email}}</h2>
+<table class=table>
+    <thead>
+        <tr>
+            <!-- <th>ID</th> -->
+            <th>COURSE NAME</th>
+            <th>NOTES</th>
+            <th>LINK</th>
+            <th>MENTOR NAME</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- <for(Todo todo:todos)> -->
+        <tr *ngFor="let course of courseslist">
+            <!-- <td>{{todo.id}}</td> -->
+            <td>{{course.coursename}}</td>
+            <td>{{course.note}}</td>
+            <td>{{course.link}}</td>
+            <td>{{course.mentorcourse}}</td>
+     
+        </tr>
+
+    </tbody>
+
+
+</table>
+<app-footerforallpage></app-footerforallpage>

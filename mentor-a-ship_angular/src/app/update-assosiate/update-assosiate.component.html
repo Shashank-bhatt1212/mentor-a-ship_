@@ -1,0 +1,57 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div><h1 href="#">CapstoneProject</h1></div>
+        <div>
+            <ul class="navbar-nav">
+                <a (click)="linkForMentorDetails()"  class="nav-link">Mentor Profile</a>
+
+            </ul>
+          
+            <ul class="navbar-nav">
+                <div class="dropdown"><button class="dropbtn">profile
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a (click)="editprofileAssosiate()">View Profile</a>
+                        <a href="#">Logout</a>
+                    </div>
+                </div>
+            </ul>
+        </div>
+
+    </nav>
+</header>
+<h2>Now you can edit your details {{email}}</h2>
+
+    <table class=table>
+        <thead>
+            <tr>
+                <!-- <th>ID</th> -->
+                <th>User_name</th>
+                <td><input [(ngModel)]="assosiate.name" #description="ngModel"  ></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>change password</th>
+                <td><input [(ngModel)]="assosiate.password" #description="ngModel"  ></td>
+                <button  class="button button3" (click)= "changepasswordassosiate(assosiate.email,assosiate.password)">Update</button>
+            </tr>
+        </tbody>
+        <tbody>
+        <tbody>
+            <tr>
+                <th>email</th>
+                <td>{{assosiate.email}}</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <th>update Info</th>
+                <td ><button  class="button button3" (click)= "updateDetails()">Update</button>
+               </td>
+            </tr>
+        </tbody>
+
+</table>
+<app-footerforallpage></app-footerforallpage>
